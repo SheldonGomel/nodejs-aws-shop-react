@@ -18,7 +18,8 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "outDir": "./cdk-app/resources/build"
   },
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]

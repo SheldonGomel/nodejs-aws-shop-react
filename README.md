@@ -1,3 +1,9 @@
+# CloudFront link
+[CloudFront URL](https://d2wu7mzarxo2fn.cloudfront.net)
+
+# S3-website link
+[S3-website URL](https://aws-rss-react.s3.eu-west-1.amazonaws.com/index.html)
+
 # React-shop-cloudfront
 
 This is frontend starter project for nodejs-aws mentoring program. It uses the following technologies:
@@ -36,3 +42,7 @@ Runs tests in console, in browser or with coverage.
 ### `lint`, `prettier`
 
 Runs linting and formatting for all files in `src` folder.
+
+### `deploy`
+
+Runs build and deploy project on AWS.

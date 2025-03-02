@@ -13,6 +13,9 @@ export default defineConfig({
     },
   },
   plugins: [react()],
+  build: {
+    outDir: "./cdk-app/resources/build"
+  },
   test: {
     globals: true,
     environment: "jsdom",
