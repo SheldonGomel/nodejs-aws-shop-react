@@ -15,6 +15,11 @@ export default function CSVFileImport({ url, title }: CSVFileImportProps) {
     const files = e.target.files;
     if (files && files.length > 0) {
       const file = files[0];
+      if (!file.name.endsWith(".csv")) {
+        alert("Please select a CSV file");
+        e.target.value = ""; // Reset the input
+        return;
+      }
       setFile(file);
     }
   };
@@ -49,7 +54,7 @@ export default function CSVFileImport({ url, title }: CSVFileImportProps) {
         {title}
       </Typography>
       {!file ? (
-        <input type="file" onChange={onFileChange} />
+        <input type="file" onChange={onFileChange} accept=".csv" />
       ) : (
         <div>
           <button onClick={removeFile}>Remove file</button>
