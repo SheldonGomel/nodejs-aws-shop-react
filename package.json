@@ -26,7 +26,8 @@
     "react-dom": "^18.2.0",
     "react-query": "^3.39.1",
     "react-router-dom": "^6.3.0",
-    "yup": "^0.32.11"
+    "yup": "^0.32.11",
+    "buffer": "^6.0.3"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.16.4",
