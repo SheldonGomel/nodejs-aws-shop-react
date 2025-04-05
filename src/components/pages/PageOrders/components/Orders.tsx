@@ -12,11 +12,16 @@ import {
   useInvalidateOrders,
   useOrders,
 } from "~/queries/orders";
+import { useEffect } from "react";
 
 export default function Orders() {
   const { data } = useOrders();
   const invalidateOrders = useInvalidateOrders();
   const { mutate: deleteOrder } = useDeleteOrder();
+
+  useEffect(() => {
+    invalidateOrders();
+  }, []);
 
   return (
     <TableContainer component={Paper}>
