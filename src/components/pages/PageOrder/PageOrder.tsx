@@ -1,6 +1,6 @@
 import React from "react";
 import { Order, OrderItem } from "~/models/Order";
-import axios from "axios";
+import { axiosClient as axios } from "~/index";
 import { useParams } from "react-router-dom";
 import PaperLayout from "~/components/PaperLayout/PaperLayout";
 import Typography from "@mui/material/Typography";
@@ -43,7 +43,8 @@ export default function PageOrder() {
       queryKey: "products",
       queryFn: async () => {
         const res = await axios.get<AvailableProduct[]>(
-          `${API_PATHS.bff}/product/available`
+          // `${API_PATHS.bff}/product/available`
+          `${API_PATHS.product}/products`
         );
         return res.data;
       },
