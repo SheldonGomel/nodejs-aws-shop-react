@@ -57,7 +57,7 @@ export class DeploymentService extends Construct {
       distributionPaths: ["/*"],
     });
 
-    const ebUrl = 'sheldongomel-cart-api-dev.eu-west-1.elasticbeanstalk.com';
+    const ebUrl = 'develop.eba-2ajyaycx.eu-west-1.elasticbeanstalk.com';
 
     // Create CloudFront Distribution
     const cartDistribution = new cloudfront.Distribution(this, 'CartApiDistribution', {
